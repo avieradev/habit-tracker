@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --neobrutal-shadow: 4px 4px 0px 0px #000000;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  color: #1a1a1a;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Neobrutalism button */
+.neo-button {
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: var(--neobrutal-shadow);
+  transition: all 0.1s ease;
+}
+
+.neo-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.neo-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Completed button variant */
+.neo-button-completed {
+  background: #22c55e;
+  color: white;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: var(--neobrutal-shadow);
+}
+
+/* Input neobrutalism */
+.neo-input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000000;
+  border-radius: 12px;
+  box-shadow: var(--neobrutal-shadow);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.neo-input:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+/* Streak fire animation */
+@keyframes pulse-fire {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.streak-fire {
+  animation: pulse-fire 1.5s ease-in-out infinite;
+}
